@@ -1,0 +1,176 @@
+/* le chemin d'accès de mon css: src/assets/css/styles.css */
+
+/*structure de base de body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*header.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0000;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.navbar a:hover {
+  background-color: #342525;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.navbar-right a {
+  margin-left: 20px;
+}
+
+/*hero.css */
+.hero {
+  min-height: 350px;
+  display: flex;
+  justify-content: left;
+
+  align-items: center;
+  background: #0b0000;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5em;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero span {
+  margin-left: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* footer.css */
+.site-footer {
+  background-color: #0b0000;
+  color: white;
+  padding: 0px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.footer-section {
+  margin: 0 15px;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.footer-links a:hover {
+  background-color: #342525;
+}
+
+.footer-bottom {
+  border-top: 1px solid #342525;
+  padding-top: 10px;
+  font-size: 0.9em;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.education {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f9;
+}
+
+.education-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+.education-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.education-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-logo img {
+  width: 150px; /* Ajustez cette taille selon vos besoins */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.education-logo p {
+  font-size: 1.2em;
+  color: #555;
+  margin: 0;
+}
