@@ -6,7 +6,7 @@ function History() {
   return (
     <div>
       <Header />
-      <h1>history Page</h1>
+      <h1>History Page</h1>
       <p>This is the education page of our website.</p>
       <Footer />
     </div>
