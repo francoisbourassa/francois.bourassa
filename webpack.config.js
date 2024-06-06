@@ -1,18 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    publicPath: "/francois.bourassa/", // Mise à jour du publicPath pour GitHub Pages
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -23,17 +22,21 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [{ from: "src/assets/images", to: "assets/images" }],
+      template: "./public/index.html",
     }),
   ],
   devServer: {
